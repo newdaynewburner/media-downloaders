@@ -55,7 +55,7 @@ def album_downloader(config, argv):
         album_id3_tags["year"] = input("[Release year]: ")
         print("")
         
-        video_urls = pl.urls
+        video_urls = pl.video_urls
         track_num = 1
         for video_url in video_urls:
             yt = YouTube(video_url)
@@ -97,8 +97,6 @@ def album_downloader(config, argv):
         print("Downloaded album: {}".format(album_dir))
         
     return None
-        
-        
 
 # Begin execution
 if __name__ == "__main__":
